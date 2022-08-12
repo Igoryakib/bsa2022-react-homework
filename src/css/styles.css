@@ -1,0 +1,91 @@
+:root {
+    --color-white: #ffffff;
+    --color-blue-100: #eef8fb;
+    --color-blue-200: #96daf0;
+    --color-blue-300: #7cbcde;
+    --color-blue-400: #242a3a;
+    --color-gray: #e1e1e1;
+    --overlay-color: rgb(0 0 0 / 30%);
+    --shadow: -1px 4px 74px -16px rgb(0 0 0 / 15%);
+    --font-size-100: 14px;
+    --font-size-200: 16px;
+    --font-size-300: 18px;
+    --font-size-400: 24px;
+    --font-size-500: 32px;
+    --font-size-600: 36px;
+    --container-width: 1000px;
+}
+
+/* scaffolding */
+
+:focus,
+:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--color-blue-300);
+}
+
+:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: none;
+}
+
+::selection {
+    color: var(--color-white);
+    background-color: var(--color-blue-200);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, #root {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: var(--color-blue-400);
+    font-size: var(--font-size-200);
+    font-family: Assistant, sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+    background-color: var(--color-white);
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+select {
+    color: inherit;
+    font-family: inherit;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+}
